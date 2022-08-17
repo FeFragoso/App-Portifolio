@@ -51,10 +51,9 @@ export default function App() {
                 style={{
                   flex: 0.7,
                   fontSize: 20,
-                  textAlign: 'center',
                   color: '#fff'
                 }}
-              >CURRÍCULO   </Text>
+              >CURRÍCULO</Text>
 
               <Image
                 style={{flex: 0.2, resizeMode: 'contain'}}
@@ -126,26 +125,28 @@ const s = StyleSheet.create({
   btnContato2: {
     flex: 1,
 
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center'
   },
   btnFundo: {
-    width: '35%',
+    width: '30%',
     height: '50%',
 
     justifyContent: 'center',
     alignItems: 'center',
 
+    borderRadius: 25,
     backgroundColor: '#262626'
   },
   btnFundo2: {
-    width: '75%',
+    width: '80%',
     height: '50%',
 
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
 
+    borderRadius: 25,
     backgroundColor: '#262626'
   },
   espacoVazio: {
