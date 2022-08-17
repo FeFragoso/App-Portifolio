@@ -1,6 +1,7 @@
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
 
 import LinkedIn from './assets/linkedin.svg'
+import GitHub from './assets/github.svg'
 
 export default function App() {
 
@@ -36,7 +37,7 @@ export default function App() {
 
             <TouchableOpacity style={s.btnFundo}>
 
-              <Text style={{color: '#fff'}}>GitHub</Text>
+              <GitHub/>
 
             </TouchableOpacity>
             
@@ -44,9 +45,21 @@ export default function App() {
 
           <View style={s.btnContato2}>
 
-            <TouchableOpacity style={s.btnFundo}>
+            <TouchableOpacity style={s.btnFundo2}>
 
-              <Text style={{color: '#fff'}}>Currículo</Text>
+              <Text
+                style={{
+                  flex: 0.7,
+                  fontSize: 20,
+                  textAlign: 'center',
+                  color: '#fff'
+                }}
+              >CURRÍCULO   </Text>
+
+              <Image
+                style={{flex: 0.2, resizeMode: 'contain'}}
+                source={require('./assets/download.png')}
+              />
 
             </TouchableOpacity>
 
@@ -90,6 +103,7 @@ const s = StyleSheet.create({
     borderColor: '#fff'
   },
   h1: {
+    marginTop: 20,
 
     color: '#fff',
     fontSize: 50,
@@ -119,6 +133,16 @@ const s = StyleSheet.create({
     width: '35%',
     height: '50%',
 
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    backgroundColor: '#262626'
+  },
+  btnFundo2: {
+    width: '75%',
+    height: '50%',
+
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
 
