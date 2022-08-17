@@ -1,5 +1,7 @@
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
 
+import LinkedIn from './assets/linkedin.svg'
+
 export default function App() {
 
   return (
@@ -28,7 +30,7 @@ export default function App() {
 
             <TouchableOpacity style={s.btnFundo}>
 
-              <Image source={require('./assets/linkedin.svg')}/>
+              <LinkedIn/>
 
             </TouchableOpacity>
 
