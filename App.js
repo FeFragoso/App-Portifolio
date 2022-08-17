@@ -1,46 +1,83 @@
-import { ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
 
 export default function App() {
+
   return (
-    <View style={s.container}>
-      <ImageBackground
-        source={require('./assets/cover.png')}
-        resizeMode='cover'
-        style={s.fundo}
+    <ImageBackground
+      style={s.fundo}
+      source={require('./assets/cover.png')}
+      resizeMode='cover'
       >
+      
+      <SafeAreaView style={s.areaView}>
 
         <View style={s.header}>
+
           <Image
-            source={require('./assets/foto.jpg')}
             style={s.foto}
+            source={require('./assets/foto.jpg')}
           />
 
           <Text style={s.h1}>Hello<Text style={{ color: '#D6382F' }}>.</Text>{'\n'}I am Felipe</Text>
+
         </View>
 
-      </ImageBackground>
-    </View>
+        <View style={s.btnContato}>
+
+          <View style={s.btnContato1}>
+
+            <TouchableOpacity style={s.btnFundo}>
+
+              <Image source={require('./assets/linkedin.svg')}/>
+
+            </TouchableOpacity>
+
+            <TouchableOpacity style={s.btnFundo}>
+
+              <Text style={{color: '#fff'}}>GitHub</Text>
+
+            </TouchableOpacity>
+            
+          </View>
+
+          <View style={s.btnContato2}>
+
+            <TouchableOpacity style={s.btnFundo}>
+
+              <Text style={{color: '#fff'}}>Currículo</Text>
+
+            </TouchableOpacity>
+
+          </View>
+
+        </View>
+
+        <View style={s.espacoVazio}></View>
+
+      </SafeAreaView>
+
+    </ImageBackground>
   );
 }
 
 const s = StyleSheet.create({
-  container: {
+  fundo: {
     flex: 1
   },
-  fundo: {
+
+  areaView: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center'
   },
+
   header: {
-    flex: 0.7,
+    marginTop: '5%',
+
+    flex: 0.5,
+    
     justifyContent: 'space-around',
     alignItems: 'center',
-
-    width: '100%',
-
-    borderWidth: 5,
-    borderColor: '#fff'
   },
   foto: {
     width: 300,
@@ -51,9 +88,41 @@ const s = StyleSheet.create({
     borderColor: '#fff'
   },
   h1: {
+
     color: '#fff',
-    fontSize: 45,
+    fontSize: 50,
     fontWeight: 'bold',
     textShadowColor: '3.5px 3.5px #174e6d'
+  },
+
+  btnContato: {
+    marginTop: 20,
+
+    flex: 0.3
+  },
+  btnContato1: {
+    flex: 1,
+
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
+  btnContato2: {
+    flex: 1,
+
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  btnFundo: {
+    width: '35%',
+    height: '50%',
+
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    backgroundColor: '#262626'
+  },
+  espacoVazio: {
+    flex: 0.1
   }
 });
