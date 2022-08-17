@@ -1,4 +1,4 @@
-import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
+import { ImageBackground, Image, StyleSheet, Text, View, Linking, TouchableOpacity, SafeAreaView} from 'react-native';
 
 import LinkedIn from './assets/linkedin.svg'
 import GitHub from './assets/github.svg'
@@ -29,13 +29,13 @@ export default function App() {
 
           <View style={s.btnContato1}>
 
-            <TouchableOpacity style={s.btnFundo}>
+            <TouchableOpacity style={s.btnFundo} onPress={()=> { Linking.openURL('https://www.linkedin.com/in/fefragoso/') }}>
 
               <LinkedIn/>
 
             </TouchableOpacity>
 
-            <TouchableOpacity style={s.btnFundo}>
+            <TouchableOpacity style={s.btnFundo} onPress={()=> { Linking.openURL('https://github.com/FeFragoso') }}>
 
               <GitHub/>
 
@@ -45,7 +45,7 @@ export default function App() {
 
           <View style={s.btnContato2}>
 
-            <TouchableOpacity style={s.btnFundo2}>
+            <TouchableOpacity style={s.btnFundo2} onPress={()=> { Linking.openURL('https://yourportfolio.com.br/felipefragoso/assets/Felipe-Fragoso.pdf') }}>
 
               <Text
                 style={{
